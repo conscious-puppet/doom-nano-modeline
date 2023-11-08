@@ -113,8 +113,7 @@ If HIDE-EVIL-MODE is nil, the Evil mode state is not shown in the modeline."
   (let* ((window (get-buffer-window (current-buffer)))
 
          ;; Variable to store if the this window is active.
-         (active (and (frame-focus-state)
-                      (eq window doom-nano-modeline--selected-window)))
+         (active (eq window doom-nano-modeline--selected-window))
 
          ;; Status of the buffer.
          (status (doom-nano-modeline-status))
